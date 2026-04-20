@@ -77,13 +77,13 @@ java emergency.room.triage.system.EmergencyRoomTriage
 
 ### 📊 Screenshots
 
-![Emergency Room Triage Dashboard](screenshots/dashbord.png)
+![Emergency Room Triage Dashboard](screenshots/1_dashbord.png)
 
-![Dashboard](screenshots/dashbo.png)
+![Dashboard](screenshots/2_dashbo.png)
 
-![Dashboard 1](screenshots/dashbo1.png)
+![Dashboard 1](screenshots/3_dashbo1.png)
 
-![Dashboard 2](screenshots/dashbo2.png)
+![Dashboard 2](screenshots/4_dashbo2.png)
 
 **Priority Distribution Chart**
 
