@@ -79,13 +79,19 @@ java emergency.room.triage.system.EmergencyRoomTriage
 
 **Dashboard Overview**
 
+![Dashboard 2](screenshots/dashbo2.png)
+
+![Dashboard 1](screenshots/dashbo1.png)
+
+![Dashboard](screenshots/dashbo.png)
+
 ![Emergency Room Triage Dashboard](screenshots/dashbord.png)
 
-**1 · Initial Priority Distribution (1000 patients)**
+**Priority Distribution Chart**
 
 ![Priority Distribution](screenshots/priority_distribution.svg)
 
-**2 · Hourly Treatment Rate (24-Hour Simulation)**
+**Hourly Treatment Rate Chart**
 
 ![Hourly Treatment](screenshots/hourly_treatment.svg)
 
