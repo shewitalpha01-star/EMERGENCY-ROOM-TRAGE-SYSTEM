@@ -1,11 +1,6 @@
 # Emergency Room Triage System
 ## Heap-Based Priority Queue Implementation
 
-### Simulation Dashboard
-![Emergency Room Triage Dashboard](data/dashboard_preview.png)
-
-> Interactive version: open `dashboard.html` in your browser for live charts.
-
 ### Project Overview
 This project implements an Emergency Room Triage System using a Max Heap priority queue. 
 Patients are treated based on priority (10=Most Critical, 1=Least Critical) rather than 

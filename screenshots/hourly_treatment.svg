@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#0D1117"/>
+  <text x="400" y="30" text-anchor="middle" font-family="Segoe UI,Arial" font-size="16" font-weight="bold" fill="#58A6FF">Hourly Treatment Rate — 24-Hour Simulation</text>
+  <text x="400" y="50" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="#8B949E">387 total patients treated · Peak: Hour 11 (20 patients) · Avg: 16/hr</text>
+
+  <!-- grid -->
+  <line x1="60" y1="70"  x2="780" y2="70"  stroke="#21262D" stroke-width="1"/>
+  <line x1="60" y1="120" x2="780" y2="120" stroke="#21262D" stroke-width="1"/>
+  <line x1="60" y1="170" x2="780" y2="170" stroke="#21262D" stroke-width="1"/>
+  <line x1="60" y1="220" x2="780" y2="220" stroke="#21262D" stroke-width="1"/>
+  <line x1="60" y1="270" x2="780" y2="270" stroke="#21262D" stroke-width="1"/>
+  <line x1="60" y1="320" x2="780" y2="320" stroke="#30363D" stroke-width="1"/>
+
+  <text x="52" y="74"  text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">25</text>
+  <text x="52" y="124" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">20</text>
+  <text x="52" y="174" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">15</text>
+  <text x="52" y="224" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">10</text>
+  <text x="52" y="274" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">5</text>
+  <text x="52" y="324" text-anchor="end" font-family="Segoe UI,Arial" font-size="10" fill="#8B949E">0</text>
+
+  <!-- avg line at 16 → y = 320 - (16/25)*250 = 320-160=160 -->
+  <line x1="60" y1="160" x2="780" y2="160" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="785" y="163" font-family="Segoe UI,Arial" font-size="9" fill="#FF6B6B">Avg 16</text>
+
+  <!-- data: [15,15,16,17,17,17,16,16,18,17,20,15,13,15,17,16,14,12,18,18,17,15,17,16] -->
+  <!-- x spacing: (780-60)/24 = 30px per hour, first point x=75 -->
+  <!-- y = 320 - (val/25)*250 -->
+  <!-- points: -->
+  <!-- h1=15→y=170, h2=15→170, h3=16→160, h4=17→150, h5=17→150, h6=17→150 -->
+  <!-- h7=16→160, h8=16→160, h9=18→140, h10=17→150, h11=20→120, h12=15→170 -->
+  <!-- h13=13→190, h14=15→170, h15=17→150, h16=16→160, h17=14→180, h18=12→200 -->
+  <!-- h19=18→140, h20=18→140, h21=17→150, h22=15→170, h23=17→150, h24=16→160 -->
+
+  <!-- fill area -->
+  <polygon points="75,170 105,170 135,160 165,150 195,150 225,150 255,160 285,160 315,140 345,150 375,120 405,170 435,190 465,170 495,150 525,160 555,180 585,200 615,140 645,140 675,150 705,170 735,150 765,160 765,320 75,320"
+    fill="rgba(88,166,255,0.15)"/>
+
+  <!-- line -->
+  <polyline points="75,170 105,170 135,160 165,150 195,150 225,150 255,160 285,160 315,140 345,150 375,120 405,170 435,190 465,170 495,150 525,160 555,180 585,200 615,140 645,140 675,150 705,170 735,150 765,160"
+    fill="none" stroke="#58A6FF" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- dots -->
+  <circle cx="75"  cy="170" r="4" fill="#1F6FEB"/>
+  <circle cx="105" cy="170" r="4" fill="#1F6FEB"/>
+  <circle cx="135" cy="160" r="4" fill="#1F6FEB"/>
+  <circle cx="165" cy="150" r="4" fill="#1F6FEB"/>
+  <circle cx="195" cy="150" r="4" fill="#1F6FEB"/>
+  <circle cx="225" cy="150" r="4" fill="#1F6FEB"/>
+  <circle cx="255" cy="160" r="4" fill="#1F6FEB"/>
+  <circle cx="285" cy="160" r="4" fill="#1F6FEB"/>
+  <circle cx="315" cy="140" r="4" fill="#1F6FEB"/>
+  <circle cx="345" cy="150" r="4" fill="#1F6FEB"/>
+  <!-- peak -->
+  <circle cx="375" cy="120" r="6" fill="#F0E68C" stroke="#F0E68C" stroke-width="2"/>
+  <text x="375" y="110" text-anchor="middle" font-family="Segoe UI,Arial" font-size="10" fill="#F0E68C">Peak: 20</text>
+  <circle cx="405" cy="170" r="4" fill="#1F6FEB"/>
+  <circle cx="435" cy="190" r="4" fill="#1F6FEB"/>
+  <circle cx="465" cy="170" r="4" fill="#1F6FEB"/>
+  <circle cx="495" cy="150" r="4" fill="#1F6FEB"/>
+  <circle cx="525" cy="160" r="4" fill="#1F6FEB"/>
+  <circle cx="555" cy="180" r="4" fill="#1F6FEB"/>
+  <circle cx="585" cy="200" r="4" fill="#1F6FEB"/>
+  <circle cx="615" cy="140" r="4" fill="#1F6FEB"/>
+  <circle cx="645" cy="140" r="4" fill="#1F6FEB"/>
+  <circle cx="675" cy="150" r="4" fill="#1F6FEB"/>
+  <circle cx="705" cy="170" r="4" fill="#1F6FEB"/>
+  <circle cx="735" cy="150" r="4" fill="#1F6FEB"/>
+  <circle cx="765" cy="160" r="4" fill="#1F6FEB"/>
+
+  <!-- x axis -->
+  <line x1="60" y1="320" x2="780" y2="320" stroke="#30363D" stroke-width="2"/>
+  <line x1="60" y1="70"  x2="60"  y2="320" stroke="#30363D" stroke-width="2"/>
+
+  <!-- x labels every 2 hours -->
+  <text x="75"  y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">1</text>
+  <text x="135" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">3</text>
+  <text x="195" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">5</text>
+  <text x="255" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">7</text>
+  <text x="315" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">9</text>
+  <text x="375" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">11</text>
+  <text x="435" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">13</text>
+  <text x="495" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">15</text>
+  <text x="555" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">17</text>
+  <text x="615" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">19</text>
+  <text x="675" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">21</text>
+  <text x="735" y="338" text-anchor="middle" font-family="Segoe UI,Arial" font-size="9" fill="#8B949E">23</text>
+  <text x="420" y="360" text-anchor="middle" font-family="Segoe UI,Arial" font-size="11" fill="#8B949E">Hour of Day</text>
+
+  <!-- legend -->
+  <line x1="270" y1="390" x2="300" y2="390" stroke="#58A6FF" stroke-width="2.5"/>
+  <text x="305" y="394" font-family="Segoe UI,Arial" font-size="11" fill="#8B949E">Patients/hr</text>
+  <line x1="420" y1="390" x2="450" y2="390" stroke="#FF6B6B" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="455" y="394" font-family="Segoe UI,Arial" font-size="11" fill="#8B949E">Average (16)</text>
+</svg>
