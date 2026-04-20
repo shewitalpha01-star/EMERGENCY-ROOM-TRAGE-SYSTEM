@@ -77,6 +77,10 @@ java emergency.room.triage.system.EmergencyRoomTriage
 
 ### 📊 Screenshots
 
+**Simulation Flow**
+
+![Simulation Flow](screenshots/5_simulation_flow.svg)
+
 ![Emergency Room Triage Dashboard](screenshots/1_dashbord.png)
 
 ![Dashboard](screenshots/2_dashbo.png)
