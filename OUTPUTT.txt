@@ -1,0 +1,519 @@
+run:
+============================================
+ EMERGENCY ROOM TRIAGE SYSTEM
+============================================
+Priority: 10=Most Critical, 1=Least Critical
+Format: CSV Input/Output (Preferred)
+============================================
+
+[STEP 1] Generating 1000 patients...
+Exported 1000 patients to data/patients.csv
+
+Priority Distribution (from CSV):
+  Priority 10: 105 patients
+  Priority  9: 105 patients
+  Priority  8: 98 patients
+  Priority  7: 111 patients
+  Priority  6: 91 patients
+  Priority  5: 91 patients
+  Priority  4: 93 patients
+  Priority  3: 94 patients
+  Priority  2: 120 patients
+  Priority  1: 92 patients
+
+Total patients in queue: 1000
+
+[STEP 2] Starting 24-Hour Simulation
+============================================
+Treatment Order (Highest Priority First)
+All treatments logged to data/treatments.csv
+New arrivals logged to data/arrivals.csv
+============================================
+
+Treating Patient  899 | Priority 10 | Arrival 00:03:42
+Treating Patient   79 | Priority 10 | Arrival 00:49:13
+Treating Patient  562 | Priority 10 | Arrival 00:53:37
+Treating Patient  733 | Priority 10 | Arrival 00:55:54
+Treating Patient  334 | Priority 10 | Arrival 01:39:24
+Treating Patient  462 | Priority 10 | Arrival 02:04:47
+Treating Patient  242 | Priority 10 | Arrival 02:06:58
+Treating Patient  240 | Priority 10 | Arrival 02:15:44
+Treating Patient  260 | Priority 10 | Arrival 02:23:03
+Treating Patient  194 | Priority 10 | Arrival 02:40:38
+Treating Patient  168 | Priority 10 | Arrival 02:51:20
+Treating Patient  849 | Priority 10 | Arrival 02:53:30
+Treating Patient 1002 | Priority 10 | Arrival 00:30:14
+Treating Patient    8 | Priority 10 | Arrival 03:05:01
+Treating Patient  906 | Priority 10 | Arrival 03:32:59
+Treating Patient  476 | Priority 10 | Arrival 03:41:16
+Treating Patient  197 | Priority 10 | Arrival 04:04:26
+Treating Patient  575 | Priority 10 | Arrival 04:12:30
+Treating Patient  646 | Priority 10 | Arrival 04:22:44
+Treating Patient  873 | Priority 10 | Arrival 04:39:26
+Treating Patient  656 | Priority 10 | Arrival 05:34:33
+Treating Patient  478 | Priority 10 | Arrival 05:43:07
+Treating Patient  376 | Priority 10 | Arrival 05:56:17
+Treating Patient  190 | Priority 10 | Arrival 06:35:44
+Treating Patient  879 | Priority 10 | Arrival 06:46:11
+Treating Patient  715 | Priority 10 | Arrival 07:17:22
+Treating Patient  185 | Priority 10 | Arrival 07:52:59
+Treating Patient  481 | Priority 10 | Arrival 08:34:50
+Treating Patient  219 | Priority 10 | Arrival 09:03:26
+Treating Patient  765 | Priority 10 | Arrival 09:13:03
+Treating Patient  900 | Priority 10 | Arrival 09:19:28
+Treating Patient  755 | Priority 10 | Arrival 09:25:47
+Treating Patient  766 | Priority 10 | Arrival 09:36:14
+Treating Patient  792 | Priority 10 | Arrival 09:50:24
+Treating Patient  992 | Priority 10 | Arrival 09:53:10
+Treating Patient  537 | Priority 10 | Arrival 10:17:35
+Treating Patient  105 | Priority 10 | Arrival 10:18:02
+Treating Patient  261 | Priority 10 | Arrival 10:18:54
+Treating Patient  278 | Priority 10 | Arrival 10:24:31
+Treating Patient  861 | Priority 10 | Arrival 10:30:40
+Treating Patient  365 | Priority 10 | Arrival 11:50:16
+Treating Patient  207 | Priority 10 | Arrival 12:14:06
+Treating Patient  266 | Priority 10 | Arrival 12:19:42
+Treating Patient  732 | Priority 10 | Arrival 12:26:30
+Treating Patient  897 | Priority 10 | Arrival 12:30:56
+Treating Patient  581 | Priority 10 | Arrival 13:04:34
+Treating Patient  785 | Priority 10 | Arrival 13:10:40
+Treating Patient   87 | Priority 10 | Arrival 13:10:45
+Treating Patient  938 | Priority 10 | Arrival 13:16:20
+Treating Patient  564 | Priority 10 | Arrival 13:38:54
+Treating Patient  264 | Priority 10 | Arrival 13:44:39
+Treating Patient  970 | Priority 10 | Arrival 13:56:29
+Treating Patient  953 | Priority 10 | Arrival 14:11:48
+Treating Patient  148 | Priority 10 | Arrival 14:20:27
+Treating Patient  663 | Priority 10 | Arrival 14:29:21
+Treating Patient  400 | Priority 10 | Arrival 14:31:05
+Treating Patient  988 | Priority 10 | Arrival 14:48:45
+Treating Patient  846 | Priority 10 | Arrival 14:58:36
+Treating Patient  235 | Priority 10 | Arrival 15:01:59
+Treating Patient  367 | Priority 10 | Arrival 15:14:52
+Treating Patient  494 | Priority 10 | Arrival 15:30:04
+Treating Patient  847 | Priority 10 | Arrival 15:42:47
+Treating Patient  347 | Priority 10 | Arrival 15:59:36
+Treating Patient  369 | Priority 10 | Arrival 16:07:07
+Treating Patient  731 | Priority 10 | Arrival 16:10:44
+Treating Patient  760 | Priority 10 | Arrival 16:17:59
+Treating Patient  535 | Priority 10 | Arrival 16:20:57
+Treating Patient  895 | Priority 10 | Arrival 16:23:23
+Treating Patient  691 | Priority 10 | Arrival 16:42:11
+Treating Patient  466 | Priority 10 | Arrival 17:00:39
+Treating Patient  464 | Priority 10 | Arrival 17:03:29
+Treating Patient  933 | Priority 10 | Arrival 17:30:48
+Treating Patient  307 | Priority 10 | Arrival 17:38:20
+Treating Patient  269 | Priority 10 | Arrival 17:39:50
+Treating Patient  896 | Priority 10 | Arrival 17:47:16
+Treating Patient  949 | Priority 10 | Arrival 17:52:06
+Treating Patient  255 | Priority 10 | Arrival 18:00:35
+Treating Patient  486 | Priority 10 | Arrival 18:02:49
+Treating Patient  947 | Priority 10 | Arrival 18:08:30
+Treating Patient  199 | Priority 10 | Arrival 18:18:21
+Treating Patient  324 | Priority 10 | Arrival 18:33:29
+Treating Patient  975 | Priority 10 | Arrival 18:43:25
+Treating Patient  223 | Priority 10 | Arrival 18:52:16
+Treating Patient  997 | Priority 10 | Arrival 18:54:03
+Treating Patient  512 | Priority 10 | Arrival 19:00:55
+Treating Patient   34 | Priority 10 | Arrival 19:03:01
+Treating Patient  668 | Priority 10 | Arrival 19:13:29
+Treating Patient  590 | Priority 10 | Arrival 19:44:54
+Treating Patient  563 | Priority 10 | Arrival 19:52:38
+Treating Patient  877 | Priority 10 | Arrival 20:01:52
+Treating Patient   36 | Priority 10 | Arrival 20:11:13
+Treating Patient  682 | Priority 10 | Arrival 20:11:41
+Treating Patient  328 | Priority 10 | Arrival 20:22:46
+Treating Patient  647 | Priority 10 | Arrival 20:52:51
+Treating Patient  868 | Priority 10 | Arrival 21:10:51
+Treating Patient  271 | Priority 10 | Arrival 21:25:32
+Treating Patient  196 | Priority 10 | Arrival 21:38:43
+Treating Patient   50 | Priority 10 | Arrival 21:49:36
+Treating Patient   65 | Priority 10 | Arrival 22:03:06
+Treating Patient  635 | Priority 10 | Arrival 22:25:08
+Treating Patient  371 | Priority 10 | Arrival 22:42:28
+Treating Patient  689 | Priority 10 | Arrival 23:21:21
+Treating Patient  614 | Priority 10 | Arrival 23:28:15
+Treating Patient   11 | Priority 10 | Arrival 23:35:06
+Treating Patient   45 | Priority 10 | Arrival 23:36:49
+Treating Patient    5 | Priority 10 | Arrival 23:59:57
+Treating Patient  804 | Priority  9 | Arrival 00:07:56
+Treating Patient  621 | Priority  9 | Arrival 00:26:46
+Treating Patient  711 | Priority  9 | Arrival 00:36:26
+Treating Patient  443 | Priority  9 | Arrival 01:06:08
+Treating Patient  984 | Priority  9 | Arrival 01:30:25
+Treating Patient   48 | Priority  9 | Arrival 01:38:43
+Treating Patient  373 | Priority  9 | Arrival 01:40:59
+Treating Patient 1008 | Priority  9 | Arrival 01:45:44
+Treating Patient  176 | Priority  9 | Arrival 02:34:47
+Treating Patient  967 | Priority  9 | Arrival 02:44:44
+Treating Patient  743 | Priority  9 | Arrival 03:28:33
+Treating Patient  613 | Priority  9 | Arrival 03:36:17
+Treating Patient  602 | Priority  9 | Arrival 03:37:55
+Treating Patient 1016 | Priority  9 | Arrival 03:45:32
+Treating Patient  232 | Priority  9 | Arrival 03:54:19
+Treating Patient  389 | Priority  9 | Arrival 04:15:49
+Treating Patient  475 | Priority  9 | Arrival 04:26:09
+Treating Patient 1020 | Priority  9 | Arrival 04:45:35
+Treating Patient  496 | Priority  9 | Arrival 04:47:51
+Treating Patient 1022 | Priority  9 | Arrival 05:15:06
+Treating Patient  640 | Priority  9 | Arrival 05:21:07
+Treating Patient  531 | Priority  9 | Arrival 06:35:08
+Treating Patient   84 | Priority  9 | Arrival 06:35:52
+Treating Patient  549 | Priority  9 | Arrival 06:36:50
+Treating Patient  610 | Priority  9 | Arrival 06:50:48
+Treating Patient  931 | Priority  9 | Arrival 07:04:00
+Treating Patient   68 | Priority  9 | Arrival 07:07:05
+Treating Patient  671 | Priority  9 | Arrival 07:17:37
+Treating Patient  759 | Priority  9 | Arrival 07:20:06
+Treating Patient  605 | Priority  9 | Arrival 07:36:24
+Treating Patient   85 | Priority  9 | Arrival 07:41:20
+Treating Patient  921 | Priority  9 | Arrival 07:43:10
+Treating Patient 1038 | Priority 10 | Arrival 08:15:50
+Treating Patient 1039 | Priority  9 | Arrival 08:15:25
+Treating Patient  439 | Priority  9 | Arrival 08:24:00
+Treating Patient  205 | Priority  9 | Arrival 08:27:21
+Treating Patient 1042 | Priority  9 | Arrival 08:30:36
+Treating Patient 1040 | Priority  9 | Arrival 08:30:57
+Treating Patient  267 | Priority  9 | Arrival 08:33:59
+Treating Patient  144 | Priority  9 | Arrival 08:39:10
+Treating Patient  502 | Priority  9 | Arrival 08:56:30
+Treating Patient 1045 | Priority 10 | Arrival 08:45:22
+Treating Patient  696 | Priority  9 | Arrival 09:18:13
+Treating Patient  717 | Priority  9 | Arrival 09:18:22
+Treating Patient  317 | Priority  9 | Arrival 09:39:15
+Treating Patient   13 | Priority  9 | Arrival 09:47:36
+Treating Patient  831 | Priority  9 | Arrival 09:56:56
+Treating Patient  188 | Priority  9 | Arrival 09:57:41
+Treating Patient  848 | Priority  9 | Arrival 10:44:58
+Treating Patient  629 | Priority  9 | Arrival 10:48:54
+Treating Patient  722 | Priority  9 | Arrival 10:50:04
+Treating Patient  902 | Priority  9 | Arrival 10:55:53
+Treating Patient  403 | Priority  9 | Arrival 11:08:57
+Treating Patient 1057 | Priority 10 | Arrival 09:30:35
+Treating Patient  746 | Priority  9 | Arrival 11:24:00
+Treating Patient  375 | Priority  9 | Arrival 11:30:55
+Treating Patient  304 | Priority  9 | Arrival 11:34:06
+Treating Patient  283 | Priority  9 | Arrival 11:38:16
+Treating Patient  566 | Priority  9 | Arrival 12:05:25
+Treating Patient  491 | Priority  9 | Arrival 12:18:52
+Treating Patient  783 | Priority  9 | Arrival 12:21:56
+Treating Patient  180 | Priority  9 | Arrival 12:24:04
+Treating Patient  284 | Priority  9 | Arrival 12:47:13
+Treating Patient 1065 | Priority 10 | Arrival 10:00:36
+Treating Patient  996 | Priority  9 | Arrival 12:55:07
+Treating Patient  735 | Priority  9 | Arrival 13:03:19
+Treating Patient  555 | Priority  9 | Arrival 13:10:04
+Treating Patient  794 | Priority  9 | Arrival 13:11:33
+Treating Patient  143 | Priority  9 | Arrival 13:20:03
+Treating Patient  670 | Priority  9 | Arrival 13:43:18
+Treating Patient  147 | Priority  9 | Arrival 13:54:51
+Treating Patient  886 | Priority  9 | Arrival 13:58:28
+Treating Patient  507 | Priority  9 | Arrival 14:04:33
+Treating Patient 1070 | Priority 10 | Arrival 10:30:59
+Treating Patient 1069 | Priority  9 | Arrival 10:30:38
+Treating Patient  815 | Priority  9 | Arrival 14:19:10
+Treating Patient  820 | Priority  9 | Arrival 14:31:00
+Treating Patient  786 | Priority  9 | Arrival 14:34:13
+Treating Patient   99 | Priority  9 | Arrival 14:58:41
+Treating Patient   59 | Priority  9 | Arrival 15:05:21
+Treating Patient  980 | Priority  9 | Arrival 15:57:48
+Treating Patient  789 | Priority  9 | Arrival 16:02:37
+Treating Patient  265 | Priority  9 | Arrival 16:03:21
+Treating Patient  425 | Priority  9 | Arrival 16:08:10
+Treating Patient  282 | Priority  9 | Arrival 16:13:34
+Treating Patient  445 | Priority  9 | Arrival 16:16:59
+Treating Patient 1079 | Priority  9 | Arrival 11:15:21
+Treating Patient  870 | Priority  9 | Arrival 16:17:52
+Treating Patient  862 | Priority  9 | Arrival 16:41:23
+Treating Patient   96 | Priority  9 | Arrival 16:45:48
+Treating Patient 1082 | Priority 10 | Arrival 11:30:37
+Treating Patient 1083 | Priority  9 | Arrival 11:30:27
+Treating Patient  396 | Priority  9 | Arrival 16:47:24
+Treating Patient  524 | Priority  9 | Arrival 16:59:00
+Treating Patient   63 | Priority  9 | Arrival 17:17:39
+Treating Patient  378 | Priority  9 | Arrival 17:35:20
+Treating Patient  597 | Priority  9 | Arrival 17:38:22
+Treating Patient  727 | Priority  9 | Arrival 17:41:38
+Treating Patient  259 | Priority  9 | Arrival 17:48:31
+Treating Patient  679 | Priority  9 | Arrival 18:04:57
+Treating Patient 1093 | Priority  9 | Arrival 12:15:29
+Treating Patient   39 | Priority  9 | Arrival 18:24:31
+Treating Patient  623 | Priority  9 | Arrival 18:28:04
+Treating Patient  570 | Priority  9 | Arrival 01:36:28
+Treating Patient  790 | Priority  9 | Arrival 18:45:37
+Treating Patient  758 | Priority  9 | Arrival 19:11:53
+Treating Patient 1098 | Priority 10 | Arrival 12:45:44
+Treating Patient  558 | Priority  9 | Arrival 19:13:38
+Treating Patient  885 | Priority  9 | Arrival 19:53:22
+Treating Patient  888 | Priority  9 | Arrival 20:34:09
+Treating Patient   91 | Priority  9 | Arrival 20:48:01
+Treating Patient  916 | Priority  9 | Arrival 20:50:48
+Treating Patient  875 | Priority  9 | Arrival 20:52:35
+Treating Patient 1104 | Priority 10 | Arrival 13:15:50
+Treating Patient  632 | Priority  9 | Arrival 21:01:29
+Treating Patient  898 | Priority  9 | Arrival 21:15:09
+Treating Patient  455 | Priority  9 | Arrival 21:27:27
+Treating Patient  516 | Priority  9 | Arrival 21:49:27
+Treating Patient  637 | Priority  9 | Arrival 22:04:51
+Treating Patient  281 | Priority  9 | Arrival 22:28:33
+Treating Patient  146 | Priority  9 | Arrival 22:43:08
+Treating Patient  198 | Priority  9 | Arrival 23:22:43
+Treating Patient  116 | Priority  9 | Arrival 23:34:24
+Treating Patient  262 | Priority  9 | Arrival 23:45:35
+Treating Patient  768 | Priority  9 | Arrival 23:50:32
+Treating Patient  667 | Priority  8 | Arrival 00:01:37
+Treating Patient   73 | Priority  8 | Arrival 00:05:06
+Treating Patient  191 | Priority  8 | Arrival 00:05:28
+Treating Patient 1119 | Priority  9 | Arrival 14:15:25
+Treating Patient 1121 | Priority  9 | Arrival 14:15:47
+Treating Patient  714 | Priority  8 | Arrival 00:19:21
+Treating Patient  797 | Priority  8 | Arrival 00:20:02
+Treating Patient   27 | Priority  8 | Arrival 00:31:05
+Treating Patient 1125 | Priority 10 | Arrival 14:30:08
+Treating Patient 1123 | Priority 10 | Arrival 14:30:21
+Treating Patient  821 | Priority  8 | Arrival 00:40:44
+Treating Patient  952 | Priority  8 | Arrival 01:19:18
+Treating Patient  397 | Priority  8 | Arrival 01:20:52
+Treating Patient  905 | Priority  8 | Arrival 01:32:28
+Treating Patient  945 | Priority  8 | Arrival 01:33:38
+Treating Patient  736 | Priority  8 | Arrival 01:59:33
+Treating Patient  119 | Priority  8 | Arrival 02:11:51
+Treating Patient  497 | Priority  8 | Arrival 02:17:24
+Treating Patient  825 | Priority  8 | Arrival 02:17:53
+Treating Patient  625 | Priority  8 | Arrival 03:19:56
+Treating Patient  463 | Priority  8 | Arrival 03:27:54
+Treating Patient  683 | Priority  8 | Arrival 03:38:31
+Treating Patient  979 | Priority  8 | Arrival 03:39:20
+Treating Patient  812 | Priority  8 | Arrival 04:12:52
+Treating Patient  893 | Priority  8 | Arrival 04:34:43
+Treating Patient  665 | Priority  8 | Arrival 04:54:36
+Treating Patient  754 | Priority  8 | Arrival 05:22:51
+Treating Patient  449 | Priority  8 | Arrival 05:44:34
+Treating Patient  560 | Priority  8 | Arrival 06:14:54
+Treating Patient 1026 | Priority  8 | Arrival 06:15:32
+Treating Patient  315 | Priority  8 | Arrival 06:20:32
+Treating Patient 1027 | Priority  8 | Arrival 06:30:29
+Treating Patient  529 | Priority  8 | Arrival 06:42:19
+Treating Patient 1029 | Priority  8 | Arrival 06:45:05
+Treating Patient  844 | Priority  8 | Arrival 06:51:08
+Treating Patient  612 | Priority  8 | Arrival 06:56:07
+Treating Patient 1146 | Priority 10 | Arrival 16:15:17
+Treating Patient  551 | Priority  8 | Arrival 07:05:36
+Treating Patient  216 | Priority  8 | Arrival 07:12:13
+Treating Patient 1152 | Priority 10 | Arrival 16:30:33
+Treating Patient 1153 | Priority  9 | Arrival 16:30:13
+Treating Patient  114 | Priority  8 | Arrival 07:20:08
+Treating Patient  553 | Priority  8 | Arrival 07:34:56
+Treating Patient  917 | Priority  8 | Arrival 07:48:24
+Treating Patient  228 | Priority  8 | Arrival 08:44:24
+Treating Patient 1043 | Priority  8 | Arrival 08:45:39
+Treating Patient  338 | Priority  8 | Arrival 08:57:07
+Treating Patient  461 | Priority  8 | Arrival 08:58:07
+Treating Patient  220 | Priority  8 | Arrival 09:27:13
+Treating Patient  705 | Priority  8 | Arrival 10:03:05
+Treating Patient  721 | Priority  8 | Arrival 10:05:40
+Treating Patient 1067 | Priority  8 | Arrival 10:15:16
+Treating Patient  546 | Priority  8 | Arrival 10:23:22
+Treating Patient  521 | Priority  8 | Arrival 10:38:45
+Treating Patient  677 | Priority  8 | Arrival 10:51:14
+Treating Patient 1166 | Priority  9 | Arrival 17:45:07
+Treating Patient  685 | Priority  8 | Arrival 10:55:04
+Treating Patient 1078 | Priority  8 | Arrival 11:00:46
+Treating Patient  111 | Priority  8 | Arrival 11:16:24
+Treating Patient 1085 | Priority  8 | Arrival 11:45:25
+Treating Patient 1173 | Priority  9 | Arrival 18:00:31
+Treating Patient 1086 | Priority  8 | Arrival 11:45:28
+Treating Patient  131 | Priority  8 | Arrival 11:50:49
+Treating Patient 1087 | Priority  8 | Arrival 12:00:58
+Treating Patient  607 | Priority  8 | Arrival 12:01:40
+Treating Patient 1174 | Priority 10 | Arrival 18:15:52
+Treating Patient 1176 | Priority  9 | Arrival 18:15:56
+Treating Patient  738 | Priority  8 | Arrival 12:06:17
+Treating Patient  932 | Priority  8 | Arrival 12:40:04
+Treating Patient 1178 | Priority  9 | Arrival 18:30:11
+Treating Patient  302 | Priority  8 | Arrival 12:51:20
+Treating Patient  229 | Priority  8 | Arrival 12:51:51
+Treating Patient  112 | Priority  8 | Arrival 13:27:32
+Treating Patient  208 | Priority 10 | Arrival 03:19:18
+Treating Patient  924 | Priority  8 | Arrival 13:30:27
+Treating Patient  782 | Priority  8 | Arrival 13:39:02
+Treating Patient  517 | Priority  8 | Arrival 13:40:16
+Treating Patient  508 | Priority  8 | Arrival 13:56:06
+Treating Patient 1183 | Priority 10 | Arrival 19:00:10
+Treating Patient  350 | Priority  8 | Arrival 14:33:39
+Treating Patient 1126 | Priority  8 | Arrival 14:45:01
+Treating Patient  803 | Priority  8 | Arrival 15:04:48
+Treating Patient    1 | Priority  8 | Arrival 15:05:22
+Treating Patient  270 | Priority  8 | Arrival 15:19:10
+Treating Patient  291 | Priority  8 | Arrival 15:19:56
+Treating Patient  183 | Priority  8 | Arrival 15:22:51
+Treating Patient  126 | Priority  8 | Arrival 15:25:48
+Treating Patient  619 | Priority  8 | Arrival 15:31:34
+Treating Patient  693 | Priority  8 | Arrival 15:40:30
+Treating Patient  293 | Priority  8 | Arrival 15:45:04
+Treating Patient  225 | Priority  8 | Arrival 15:48:03
+Treating Patient   37 | Priority  8 | Arrival 15:51:59
+Treating Patient  522 | Priority  8 | Arrival 16:08:54
+Treating Patient  372 | Priority  8 | Arrival 16:10:38
+Treating Patient  596 | Priority  8 | Arrival 16:12:56
+Treating Patient 1197 | Priority 10 | Arrival 20:00:06
+Treating Patient 1198 | Priority  9 | Arrival 20:00:48
+Treating Patient 1149 | Priority  8 | Arrival 16:15:10
+Treating Patient 1157 | Priority  8 | Arrival 16:45:37
+Treating Patient  959 | Priority  8 | Arrival 16:48:52
+Treating Patient  660 | Priority  8 | Arrival 16:49:50
+Treating Patient  488 | Priority  8 | Arrival 16:57:10
+Treating Patient 1161 | Priority  8 | Arrival 17:15:47
+Treating Patient    6 | Priority  8 | Arrival 17:28:50
+Treating Patient 1204 | Priority 10 | Arrival 20:30:33
+Treating Patient 1207 | Priority  9 | Arrival 20:30:15
+Treating Patient  981 | Priority  8 | Arrival 17:40:37
+Treating Patient 1168 | Priority  8 | Arrival 17:45:24
+Treating Patient  186 | Priority  8 | Arrival 18:19:22
+Treating Patient  472 | Priority  8 | Arrival 18:25:21
+Treating Patient  910 | Priority  8 | Arrival 18:52:37
+Treating Patient  394 | Priority  8 | Arrival 18:54:08
+Treating Patient  982 | Priority  8 | Arrival 19:00:18
+Treating Patient 1188 | Priority  8 | Arrival 19:30:12
+Treating Patient  842 | Priority  8 | Arrival 19:42:27
+Treating Patient  509 | Priority  8 | Arrival 19:44:46
+Treating Patient 1194 | Priority  8 | Arrival 19:45:46
+Treating Patient  401 | Priority  8 | Arrival 19:54:36
+Treating Patient  799 | Priority  8 | Arrival 20:19:48
+Treating Patient  442 | Priority  8 | Arrival 20:42:59
+Treating Patient   54 | Priority  8 | Arrival 20:52:55
+Treating Patient 1212 | Priority  8 | Arrival 21:00:36
+Treating Patient  578 | Priority  8 | Arrival 21:06:40
+Treating Patient 1214 | Priority  8 | Arrival 21:15:50
+Treating Patient  203 | Priority  8 | Arrival 21:42:04
+Treating Patient   81 | Priority  8 | Arrival 21:53:47
+Treating Patient  616 | Priority  8 | Arrival 22:08:39
+Treating Patient  918 | Priority  8 | Arrival 22:10:34
+Treating Patient  286 | Priority  8 | Arrival 22:10:46
+Treating Patient   90 | Priority  8 | Arrival 22:42:53
+Treating Patient  690 | Priority  8 | Arrival 22:46:39
+Treating Patient  368 | Priority  8 | Arrival 23:03:23
+Treating Patient  303 | Priority  8 | Arrival 23:24:47
+Treating Patient  251 | Priority  8 | Arrival 23:36:02
+Treating Patient  252 | Priority  8 | Arrival 23:39:11
+Treating Patient  210 | Priority  7 | Arrival 00:06:07
+Treating Patient  249 | Priority  7 | Arrival 00:10:11
+Treating Patient  456 | Priority  7 | Arrival 00:39:45
+Treating Patient 1004 | Priority  7 | Arrival 00:45:21
+Treating Patient  217 | Priority  7 | Arrival 00:45:40
+Treating Patient   12 | Priority  7 | Arrival 00:48:07
+Treating Patient  694 | Priority  7 | Arrival 01:00:04
+Treating Patient  177 | Priority  7 | Arrival 01:05:51
+Treating Patient 1005 | Priority  7 | Arrival 01:15:00
+Treating Patient  287 | Priority  7 | Arrival 01:16:36
+Treating Patient  795 | Priority  7 | Arrival 01:21:14
+Treating Patient  638 | Priority  7 | Arrival 01:24:56
+Treating Patient  213 | Priority  7 | Arrival 01:47:47
+Treating Patient  480 | Priority  7 | Arrival 01:57:40
+Treating Patient  942 | Priority  7 | Arrival 02:17:01
+Treating Patient  603 | Priority  7 | Arrival 02:22:15
+Treating Patient  407 | Priority  7 | Arrival 02:51:08
+Treating Patient 1220 | Priority 10 | Arrival 23:30:42
+Treating Patient 1221 | Priority  9 | Arrival 23:30:51
+Treating Patient  956 | Priority  7 | Arrival 02:57:01
+Treating Patient  158 | Priority  7 | Arrival 03:12:26
+
+============================================
+[STEP 3] SIMULATION STATISTICS
+============================================
+Initial patients: 1000
+New arrivals: 221
+Total treated: 387
+Remaining in queue: 834
+
+TREATED PATIENTS BY PRIORITY
+----------------------------------------
+  Priority 10 :  124 patients (32.0%)
+  Priority  9 :  127 patients (32.8%)
+  Priority  8 :  117 patients (30.2%)
+  Priority  7 :   19 patients (4.9%)
+
+HOURLY TREATMENT REPORT (Hours 1-24)
+----------------------------------------
+  Hour  1 :  15 patients treated
+  Hour  2 :  15 patients treated
+  Hour  3 :  16 patients treated
+  Hour  4 :  17 patients treated
+  Hour  5 :  17 patients treated
+  Hour  6 :  17 patients treated
+  Hour  7 :  16 patients treated
+  Hour  8 :  16 patients treated
+  Hour  9 :  18 patients treated
+  Hour 10 :  17 patients treated
+  Hour 11 :  20 patients treated
+  Hour 12 :  15 patients treated
+  Hour 13 :  13 patients treated
+  Hour 14 :  15 patients treated
+  Hour 15 :  17 patients treated
+  Hour 16 :  16 patients treated
+  Hour 17 :  14 patients treated
+  Hour 18 :  12 patients treated
+  Hour 19 :  18 patients treated
+  Hour 20 :  18 patients treated
+  Hour 21 :  17 patients treated
+  Hour 22 :  15 patients treated
+  Hour 23 :  17 patients treated
+  Hour 24 :  16 patients treated
+
+  Average : 16 patients per hour
+  Peak Hour: Hour 11 (20 patients)
+Results exported to data/results.csv
+
+============================================
+[STEP 4] VERIFICATION
+============================================
+Priority 10 (Most Critical) treated before Priority 9
+Priority 9 treated before Priority 8
+Priority 8 treated before Priority 7
+Priority 7 treated before Priority 6
+Priority 6 treated before Priority 5
+Priority 5 treated before Priority 4
+Priority 4 treated before Priority 3
+Priority 3 treated before Priority 2
+Priority 2 treated before Priority 1 (Least Critical)
+Same priority: Earlier arrival treated first
+All data verified and exported to CSV format
+
+============================================
+[STEP 5] COMPLEXITY ANALYSIS
+============================================
+insert()      : O(log n) - Bubble up heap height
+extractMax()  : O(log n) - Remove root + heapify
+increasePriority(): O(log n) - Update + bubble up
+buildMaxHeap(): O(n) - Floyd's algorithm
+maxHeapify()  : O(log n) - Down-heap traversal
+isEmpty()     : O(1) - Check size variable
+Space Complexity: O(n) - Array storage
+
+============================================
+[STEP 6] REAL-WORLD RELEVANCE
+============================================
+• Emergency rooms treat critical patients (Priority 10) first
+• Priority updates simulate worsening conditions
+• Hourly data helps hospital staffing decisions
+• CSV format allows easy analysis in Excel/Spreadsheets
+• O(log n) operations handle thousands of patients efficiently
+• Used in CPU scheduling, network routing, and air traffic control
+
+============================================
+[STEP 7] CSV FILES GENERATED
+============================================
+data/patients.csv     - Initial 1000 patients
+data/arrivals.csv     - 221 new patient arrivals
+data/treatments.csv   - 387 treatment records
+data/results.csv        - Complete statistics
+
+All CSV files are in the 'data' folder
+Files can be opened in Excel for analysis
+
+============================================
+PROJECT COMPLETED SUCCESSFULLY
+Emergency Room Triage System
+Heap-Based Priority Queue with CSV Support
+============================================
+BUILD SUCCESSFUL (total time: 3 seconds)
