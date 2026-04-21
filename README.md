@@ -11,6 +11,8 @@ arrival time, simulating real hospital triage systems.
 - **Language:** Java
 - **Data Structure:** Array-based Max Heap
 - **Indexing:** Zero-based (Parent(i) = floor((i-1)/2))
+- **Report:** [AlgorithmReport-I1.pdf](AlgorithmReport-I1.pdf)
+- **Question:** [Question.pdf](Question.pdf)
 
 ### Features Implemented
 - ✅ Array-based Max Heap with zero-based indexing
