@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="700" height="340" font-family="monospace">
+  <rect width="700" height="340" fill="#0d1117" rx="12"/>
+  <text x="350" y="32" text-anchor="middle" fill="#58a6ff" font-size="15" font-weight="bold">Max Heap Structure — Emergency Room Triage</text>
+  <text x="350" y="52" text-anchor="middle" fill="#8b949e" font-size="11">Parent(i) = floor((i-1)/2)  |  Left(i) = 2i+1  |  Right(i) = 2i+2</text>
+
+  <!-- Level 0: root -->
+  <circle cx="350" cy="95" r="28" fill="#1f6feb" stroke="#58a6ff" stroke-width="2"/>
+  <text x="350" y="91" text-anchor="middle" fill="white" font-size="11" font-weight="bold">P=10</text>
+  <text x="350" y="105" text-anchor="middle" fill="#cdd9e5" font-size="9">ID:899</text>
+
+  <!-- Level 1 -->
+  <line x1="330" y1="118" x2="215" y2="162" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="370" y1="118" x2="485" y2="162" stroke="#30363d" stroke-width="1.5"/>
+
+  <circle cx="200" cy="185" r="26" fill="#1f6feb" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="200" y="181" text-anchor="middle" fill="white" font-size="11" font-weight="bold">P=10</text>
+  <text x="200" y="195" text-anchor="middle" fill="#cdd9e5" font-size="9">ID:79</text>
+
+  <circle cx="500" cy="185" r="26" fill="#1f6feb" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="500" y="181" text-anchor="middle" fill="white" font-size="11" font-weight="bold">P=10</text>
+  <text x="500" y="195" text-anchor="middle" fill="#cdd9e5" font-size="9">ID:562</text>
+
+  <!-- Level 2 -->
+  <line x1="182" y1="207" x2="120" y2="248" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="218" y1="207" x2="270" y2="248" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="482" y1="207" x2="430" y2="248" stroke="#30363d" stroke-width="1.5"/>
+  <line x1="518" y1="207" x2="580" y2="248" stroke="#30363d" stroke-width="1.5"/>
+
+  <circle cx="105" cy="268" r="24" fill="#21262d" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="105" y="264" text-anchor="middle" fill="#cdd9e5" font-size="10" font-weight="bold">P=9</text>
+  <text x="105" y="277" text-anchor="middle" fill="#8b949e" font-size="9">ID:804</text>
+
+  <circle cx="275" cy="268" r="24" fill="#21262d" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="275" y="264" text-anchor="middle" fill="#cdd9e5" font-size="10" font-weight="bold">P=9</text>
+  <text x="275" y="277" text-anchor="middle" fill="#8b949e" font-size="9">ID:621</text>
+
+  <circle cx="425" cy="268" r="24" fill="#21262d" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="425" y="264" text-anchor="middle" fill="#cdd9e5" font-size="10" font-weight="bold">P=9</text>
+  <text x="425" y="277" text-anchor="middle" fill="#8b949e" font-size="9">ID:711</text>
+
+  <circle cx="595" cy="268" r="24" fill="#21262d" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="595" y="264" text-anchor="middle" fill="#cdd9e5" font-size="10" font-weight="bold">P=8</text>
+  <text x="595" y="277" text-anchor="middle" fill="#8b949e" font-size="9">ID:667</text>
+
+  <!-- Legend -->
+  <rect x="30" y="308" width="14" height="14" fill="#1f6feb" rx="3"/>
+  <text x="50" y="320" fill="#8b949e" font-size="10">Priority 10 (Critical)</text>
+  <rect x="200" y="308" width="14" height="14" fill="#21262d" stroke="#388bfd" stroke-width="1.5" rx="3"/>
+  <text x="220" y="320" fill="#8b949e" font-size="10">Priority 9–8</text>
+  <text x="420" y="320" fill="#8b949e" font-size="10">extractMax() always removes root (highest priority)</text>
+</svg>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emergency Room Triage System — Algorithm Report</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --blue: #58a6ff;
+      --blue-dim: #1f6feb;
+      --green: #3fb950;
+      --yellow: #e3b341;
+      --red: #f85149;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.7; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 0 32px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; color: var(--blue); margin-bottom: 6px; }
+    header p { color: var(--muted); font-size: 1rem; }
+    header .badge {
+      display: inline-block; margin: 12px 4px 0;
+      padding: 4px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+    }
+    .badge-blue  { background: #1f3a5f; color: var(--blue); }
+    .badge-green { background: #1a3a2a; color: var(--green); }
+    .badge-yellow{ background: #3a2e0a; color: var(--yellow); }
+
+    nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      display: flex; gap: 0; overflow-x: auto;
+    }
+    nav a {
+      padding: 14px 18px; color: var(--muted); font-size: 0.9rem;
+      border-bottom: 2px solid transparent; white-space: nowrap;
+    }
+    nav a:hover, nav a.active { color: var(--blue); border-bottom-color: var(--blue); text-decoration: none; }
+
+    main { max-width: 960px; margin: 0 auto; padding: 40px 24px 80px; }
+
+    section { margin-bottom: 56px; }
+    h2 { font-size: 1.4rem; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 20px; }
+    h3 { font-size: 1.05rem; color: var(--blue); margin: 24px 0 10px; }
+    p  { color: var(--muted); margin-bottom: 12px; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9rem; }
+    th { background: var(--surface); color: var(--text); padding: 10px 14px; text-align: left; border: 1px solid var(--border); }
+    td { padding: 9px 14px; border: 1px solid var(--border); color: var(--muted); }
+    tr:nth-child(even) td { background: #0d1117; }
+    tr:hover td { background: #1c2128; }
+
+    .card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px 24px; margin-bottom: 16px;
+    }
+    .card h3 { margin-top: 0; }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-box {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 18px; text-align: center;
+    }
+    .stat-box .val { font-size: 2rem; font-weight: 700; color: var(--blue); }
+    .stat-box .lbl { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+
+    pre {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 18px; overflow-x: auto;
+      font-family: 'Courier New', monospace; font-size: 0.85rem; color: #cdd9e5;
+      margin-bottom: 16px;
+    }
+    code { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--blue); background: #1c2128; padding: 2px 6px; border-radius: 4px; }
+
+    .complexity-badge {
+      display: inline-block; padding: 2px 10px; border-radius: 12px;
+      font-size: 0.8rem; font-weight: 600; font-family: monospace;
+    }
+    .o-log  { background: #1a3a2a; color: var(--green); }
+    .o-n    { background: #1f3a5f; color: var(--blue); }
+    .o-1    { background: #3a2e0a; color: var(--yellow); }
+
+    .check { color: var(--green); margin-right: 6px; }
+
+    svg.chart { width: 100%; max-width: 680px; display: block; margin: 0 auto 24px; }
+
+    footer {
+      text-align: center; padding: 32px; color: var(--muted);
+      border-top: 1px solid var(--border); font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Emergency Room Triage System</h1>
+  <p>Heap-Based Priority Queue Implementation</p>
+  <span class="badge badge-blue">Design and Analysis of Algorithms</span>
+  <span class="badge badge-green">Java</span>
+  <span class="badge badge-yellow">Max Heap · O(log n)</span>
+</header>
+
+<nav>
+  <a href="#overview" class="active">Overview</a>
+  <a href="#algorithm">Algorithm</a>
+  <a href="#complexity">Complexity</a>
+  <a href="#simulation">Simulation</a>
+  <a href="#charts">Charts</a>
+  <a href="#output">Output</a>
+  <a href="#team">Team</a>
+</nav>
+
+<main>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <h2>Project Overview</h2>
+    <p>
+      In a real emergency room, patients cannot be treated in first-come-first-served order.
+      A patient with a minor injury must wait while a critically injured patient is treated immediately.
+      This system models that reality using a <strong style="color:var(--text)">Max Heap priority queue</strong>.
+    </p>
+    <div class="stat-grid">
+      <div class="stat-box"><div class="val">1,000</div><div class="lbl">Initial Patients</div></div>
+      <div class="stat-box"><div class="val">221</div><div class="lbl">New Arrivals</div></div>
+      <div class="stat-box"><div class="val">387</div><div class="lbl">Total Treated</div></div>
+      <div class="stat-box"><div class="val">834</div><div class="lbl">Remaining in Queue</div></div>
+      <div class="stat-box"><div class="val">16</div><div class="lbl">Avg / Hour</div></div>
+      <div class="stat-box"><div class="val">Hr 11</div><div class="lbl">Peak Hour (20 pts)</div></div>
+    </div>
+
+    <h3>Course Information</h3>
+    <table>
+      <tr><th>Field</th><th>Detail</th></tr>
+      <tr><td>Course</td><td>Design and Analysis of Algorithms</td></tr>
+      <tr><td>University</td><td>Aksum University, AIT</td></tr>
+      <tr><td>Faculty</td><td>Faculty of Computing Technology</td></tr>
+      <tr><td>Department</td><td>Department of Computer Science</td></tr>
+      <tr><td>Language</td><td>Java</td></tr>
+      <tr><td>Data Structure</td><td>Array-based Max Heap</td></tr>
+      <tr><td>Indexing</td><td>Zero-based — Parent(i) = floor((i-1)/2)</td></tr>
+    </table>
+
+    <h3>Features Implemented</h3>
+    <div class="card">
+      <p><span class="check">✅</span> Array-based Max Heap with zero-based indexing</p>
+      <p><span class="check">✅</span> <code>insert()</code> — O(log n) bubble-up</p>
+      <p><span class="check">✅</span> <code>extractMax()</code> — O(log n) remove root + heapify</p>
+      <p><span class="check">✅</span> <code>increasePriority()</code> — O(log n) update + bubble-up</p>
+      <p><span class="check">✅</span> <code>isEmpty()</code> — O(1)</p>
+      <p><span class="check">✅</span> <code>maxHeapify()</code> — O(log n) down-heap traversal</p>
+      <p><span class="check">✅</span> <code>buildMaxHeap()</code> — O(n) Floyd's Algorithm</p>
+      <p><span class="check">✅</span> 1,000+ synthetic patient dataset</p>
+      <p><span class="check">✅</span> 24-hour ER simulation with random arrivals</p>
+      <p><span class="check">✅</span> Peak-hour arrival modelling (8am–8pm higher rate)</p>
+      <p><span class="check">✅</span> Random priority escalation (worsening condition simulation)</p>
+      <p><span class="check">✅</span> CSV input/output for all data</p>
+      <p><span class="check">✅</span> Complete complexity analysis with proofs</p>
+    </div>
+  </section>
+
+  <!-- ALGORITHM -->
+  <section id="algorithm">
+    <h2>Algorithm Design</h2>
+
+    <h3>Max Heap Property</h3>
+    <p>
+      For every node <code>i</code>, the priority of the parent is always ≥ the priority of its children.
+      This guarantees that <code>extractMax()</code> always returns the most critical patient in O(log n).
+    </p>
+    <pre>
+Array-based zero-based indexing:
+  Parent(i)      = floor((i - 1) / 2)
+  Left child(i)  = 2i + 1
+  Right child(i) = 2i + 2
+
+Heap property:  heap[Parent(i)].priority >= heap[i].priority
+Tie-breaking:   earlier arrival time treated first</pre>
+
+    <h3>insert() — O(log n)</h3>
+    <pre>
+1. Place new patient at heap[size], increment size
+2. Bubble up: while i > 0 and heap[i] > heap[Parent(i)]:
+     swap(i, Parent(i))
+     i = Parent(i)</pre>
+
+    <h3>extractMax() — O(log n)</h3>
+    <pre>
+1. Save heap[0] (most critical patient)
+2. Move heap[size-1] to heap[0], decrement size
+3. Call maxHeapify(0) to restore heap property
+4. Return saved patient</pre>
+
+    <h3>maxHeapify() — O(log n)</h3>
+    <pre>
+maxHeapify(i):
+  l = left(i),  r = right(i),  largest = i
+  if l < size and heap[l] > heap[largest]: largest = l
+  if r < size and heap[r] > heap[largest]: largest = r
+  if largest != i:
+    swap(i, largest)
+    maxHeapify(largest)   // recurse down</pre>
+
+    <h3>buildMaxHeap() — O(n) Floyd's Algorithm</h3>
+    <pre>
+// Start from last non-leaf node, heapify down to root
+for i = floor(size/2) - 1 down to 0:
+    maxHeapify(i)
+
+// Proof: O(n) — sum of heights across all nodes = O(n)</pre>
+
+    <h3>increasePriority() — O(log n)</h3>
+    <pre>
+1. Find patient by ID (linear scan O(n))
+2. Update priority (only if new > current)
+3. Bubble up to restore heap property</pre>
+  </section>
+
+  <!-- COMPLEXITY -->
+  <section id="complexity">
+    <h2>Complexity Analysis</h2>
+
+    <table>
+      <tr><th>Operation</th><th>Time Complexity</th><th>Space</th><th>Notes</th></tr>
+      <tr>
+        <td><code>insert()</code></td>
+        <td><span class="complexity-badge o-log">O(log n)</span></td>
+        <td>O(1)</td>
+        <td>Bubble up — at most heap height steps</td>
+      </tr>
+      <tr>
+        <td><code>extractMax()</code></td>
+        <td><span class="complexity-badge o-log">O(log n)</span></td>
+        <td>O(1)</td>
+        <td>Remove root + heapify down</td>
+      </tr>
+      <tr>
+        <td><code>increasePriority()</code></td>
+        <td><span class="complexity-badge o-log">O(log n)</span></td>
+        <td>O(1)</td>
+        <td>Update + bubble up (scan is O(n) worst case)</td>
+      </tr>
+      <tr>
+        <td><code>maxHeapify()</code></td>
+        <td><span class="complexity-badge o-log">O(log n)</span></td>
+        <td>O(log n)</td>
+        <td>Recursive — call stack depth = heap height</td>
+      </tr>
+      <tr>
+        <td><code>buildMaxHeap()</code></td>
+        <td><span class="complexity-badge o-n">O(n)</span></td>
+        <td>O(log n)</td>
+        <td>Floyd's algorithm — tighter than O(n log n)</td>
+      </tr>
+      <tr>
+        <td><code>isEmpty()</code></td>
+        <td><span class="complexity-badge o-1">O(1)</span></td>
+        <td>O(1)</td>
+        <td>Single size variable check</td>
+      </tr>
+      <tr>
+        <td>Space (heap array)</td>
+        <td>—</td>
+        <td>O(n)</td>
+        <td>Array of size MAX = 2000</td>
+      </tr>
+    </table>
+
+    <h3>Why O(n) for buildMaxHeap?</h3>
+    <p>
+      Naively calling <code>insert()</code> n times gives O(n log n).
+      Floyd's algorithm is tighter: nodes at height h number at most ⌈n/2<sup>h+1</sup>⌉,
+      and each costs O(h). Summing over all heights:
+    </p>
+    <pre>
+T(n) = Σ(h=0 to log n) ⌈n/2^(h+1)⌉ · O(h)
+     = O(n · Σ(h=0 to ∞) h/2^h)
+     = O(n · 2)   [geometric series]
+     = O(n)</pre>
+
+    <h3>Comparison: Sorted Array vs Max Heap</h3>
+    <table>
+      <tr><th>Operation</th><th>Sorted Array</th><th>Max Heap</th></tr>
+      <tr><td>Insert</td><td>O(n)</td><td><span class="complexity-badge o-log">O(log n)</span></td></tr>
+      <tr><td>Extract Max</td><td>O(1)</td><td><span class="complexity-badge o-log">O(log n)</span></td></tr>
+      <tr><td>Increase Priority</td><td>O(n)</td><td><span class="complexity-badge o-log">O(log n)</span></td></tr>
+      <tr><td>Build from n items</td><td>O(n log n)</td><td><span class="complexity-badge o-n">O(n)</span></td></tr>
+    </table>
+    <p>Max Heap is the optimal choice for a dynamic priority queue with frequent insertions and extractions.</p>
+  </section>
+
+  <!-- SIMULATION -->
+  <section id="simulation">
+    <h2>Simulation Design</h2>
+
+    <h3>Patient Priority Model</h3>
+    <table>
+      <tr><th>Priority</th><th>Description</th><th>Example Condition</th></tr>
+      <tr><td>10</td><td>Most Critical</td><td>Cardiac arrest, severe trauma</td></tr>
+      <tr><td>9</td><td>Critical</td><td>Stroke, major fracture</td></tr>
+      <tr><td>8</td><td>Urgent</td><td>High fever, severe pain</td></tr>
+      <tr><td>7</td><td>Semi-urgent</td><td>Moderate injury</td></tr>
+      <tr><td>1–6</td><td>Non-urgent</td><td>Minor cuts, routine checks</td></tr>
+    </table>
+
+    <h3>Simulation Parameters</h3>
+    <div class="card">
+      <p>• <strong style="color:var(--text)">Initial queue:</strong> 1,000 patients generated with random priorities and arrival times</p>
+      <p>• <strong style="color:var(--text)">Treatment rate:</strong> 3–5 patients every 15 minutes (12–20 per hour)</p>
+      <p>• <strong style="color:var(--text)">Peak hours (8am–8pm):</strong> 2–5 new arrivals per 15-min slot</p>
+      <p>• <strong style="color:var(--text)">Off-peak hours:</strong> 0–2 new arrivals per 15-min slot</p>
+      <p>• <strong style="color:var(--text)">Priority escalation:</strong> 10% chance per slot — simulates worsening condition</p>
+      <p>• <strong style="color:var(--text)">Tie-breaking:</strong> same priority → earlier arrival time treated first</p>
+    </div>
+
+    <h3>Treatment Results by Priority</h3>
+    <table>
+      <tr><th>Priority</th><th>Patients Treated</th><th>% of Total</th></tr>
+      <tr><td>10 — Most Critical</td><td>124</td><td>32.0%</td></tr>
+      <tr><td>9</td><td>127</td><td>32.8%</td></tr>
+      <tr><td>8</td><td>117</td><td>30.2%</td></tr>
+      <tr><td>7</td><td>19</td><td>4.9%</td></tr>
+    </table>
+    <p>✅ Priority 10 always treated before Priority 9, Priority 9 before Priority 8 — Max Heap guarantee holds throughout the simulation.</p>
+
+    <h3>CSV Files Generated</h3>
+    <table>
+      <tr><th>File</th><th>Description</th><th>Columns</th></tr>
+      <tr><td><code>data/patients.csv</code></td><td>Initial 1,000 patients</td><td>PatientID, Priority, Hour, Minute, Second</td></tr>
+      <tr><td><code>data/arrivals.csv</code></td><td>221 new arrivals during simulation</td><td>PatientID, Priority, ArrivalHour, ArrivalMinute, ArrivalSecond</td></tr>
+      <tr><td><code>data/treatments.csv</code></td><td>387 treatment records</td><td>PatientID, Priority, ArrivalTime, TreatmentTime</td></tr>
+      <tr><td><code>data/results.csv</code></td><td>Final statistics</td><td>Statistics and hourly report</td></tr>
+    </table>
+  </section>
+
+  <!-- CHARTS -->
+  <section id="charts">
+    <h2>Charts &amp; Visualizations</h2>
+
+    <h3>Max Heap Structure</h3>
+    <img src="../screenshots/heap_structure.svg" alt="Heap Structure" style="width:100%;max-width:700px;display:block;margin:0 auto 24px;border-radius:8px;"/>
+
+    <h3>Treated Patients by Priority</h3>
+    <img src="../screenshots/priority_chart.svg" alt="Priority Chart" style="width:100%;max-width:700px;display:block;margin:0 auto 24px;border-radius:8px;"/>
+
+    <h3>Hourly Treatment Rate</h3>
+    <img src="../screenshots/hourly_chart.svg" alt="Hourly Chart" style="width:100%;max-width:720px;display:block;margin:0 auto 24px;border-radius:8px;"/>
+
+    <h3>Simulation Flow</h3>
+    <img src="../screenshots/5_simulation_flow.svg" alt="Simulation Flow" style="width:100%;max-width:700px;display:block;margin:0 auto 24px;border-radius:8px;"/>
+  </section>
+
+  <!-- OUTPUT -->
+  <section id="output">
+    <h2>How to Compile and Run</h2>
+    <pre>
+# Compile
+javac -d out src/ERTS/room/triage/EmergencyRoomTriage.java
+
+# Run
+java -cp out ERTS.room.triage.EmergencyRoomTriage</pre>
+    <p>Or open in <strong style="color:var(--text)">NetBeans IDE</strong> and press <strong style="color:var(--text)">Run Project</strong> — the build system is pre-configured via <code>build.xml</code>.</p>
+
+    <h3>Sample Console Output</h3>
+    <pre>
+============================================
+ EMERGENCY ROOM TRIAGE SYSTEM
+============================================
+Priority: 10=Most Critical, 1=Least Critical
+
+[STEP 1] Generating 1000 patients...
+Exported 1000 patients to data/patients.csv
+
+[STEP 2] Starting 24-Hour Simulation
+Treating Patient  899 | Priority 10 | Arrival 00:03:42
+Treating Patient   79 | Priority 10 | Arrival 00:49:13
+Treating Patient  562 | Priority 10 | Arrival 00:53:37
+...
+
+[STEP 3] SIMULATION STATISTICS
+Initial patients: 1000  |  New arrivals: 221
+Total treated: 387      |  Remaining: 834
+
+[STEP 5] COMPLEXITY ANALYSIS
+insert()       : O(log n)
+extractMax()   : O(log n)
+buildMaxHeap() : O(n) — Floyd's Algorithm
+
+PROJECT COMPLETED SUCCESSFULLY</pre>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <h2>Team</h2>
+    <table>
+      <tr><th>No</th><th>Name</th><th>ID</th></tr>
+      <tr><td>1</td><td>Eyerusalem Teklay</td><td>Aku-1602682</td></tr>
+      <tr><td>2</td><td>Shewit Legese</td><td>Aku-1602069</td></tr>
+      <tr><td>3</td><td>Weldearegay Gebrey</td><td>Aku-1602148</td></tr>
+    </table>
+
+    <h3>Real-World Applications</h3>
+    <div class="card">
+      <p>• Emergency rooms treating critical patients first</p>
+      <p>• CPU process scheduling by priority</p>
+      <p>• Network packet routing (QoS)</p>
+      <p>• Air traffic control sequencing</p>
+      <p>• Hospital resource allocation systems</p>
+      <p>• Disaster response triage coordination</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Emergency Room Triage System — Design and Analysis of Algorithms — Aksum University, AIT
+</footer>
+
+</body>
+</html>
