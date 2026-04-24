@@ -159,4 +159,6 @@ Or open in **NetBeans IDE** and press **Run Project** — build system pre-confi
 
 ## 📄 Report
 
-[AlgorithmReport-I1.pdf](AlgorithmReport-I1.pdf) &nbsp; [View Full HTML Report](https://htmlpreview.github.io/?https://github.com/shewitalpha01-star/EMERGENCY-ROOM-TRAGE-SYSTEM/blob/main/docs/report.html)
+[AlgorithmReport-I1.pdf](AlgorithmReport-I1.pdf)
+
+[View Full HTML Report](https://htmlpreview.github.io/?https://github.com/shewitalpha01-star/EMERGENCY-ROOM-TRAGE-SYSTEM/blob/main/docs/report.html)
