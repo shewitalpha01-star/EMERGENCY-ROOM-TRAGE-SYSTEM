@@ -92,7 +92,7 @@ Or open in **NetBeans IDE** and press **Run Project** — build system pre-confi
 | 8 | 117 | 30.2% |
 | 7 | 19 | 4.9% |
 
-> ✅ Priority 10 always treated before Priority 9, Priority 9 before Priority 8, and so on.
+> Priority 10 always treated before Priority 9, Priority 9 before Priority 8, and so on.
 > Same priority → earlier arrival treated first.
 
 ---
