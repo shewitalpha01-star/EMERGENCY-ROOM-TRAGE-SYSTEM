@@ -41,20 +41,20 @@ This system models that reality using a **Max Heap priority queue**:
 
 ## Features Implemented
 
-- ✅ Array-based Max Heap with zero-based indexing
-- ✅ `insert()` — O(log n) bubble-up
-- ✅ `extractMax()` — O(log n) remove root + heapify
-- ✅ `increasePriority()` — O(log n) update + bubble-up
-- ✅ `isEmpty()` — O(1)
-- ✅ `maxHeapify()` — O(log n) down-heap traversal
-- ✅ `buildMaxHeap()` — O(n) Floyd's Algorithm
-- ✅ 1,000+ synthetic patient dataset
-- ✅ 24-hour ER simulation with random arrivals
-- ✅ Peak-hour arrival modelling (8am–8pm higher rate)
-- ✅ Random priority escalation — simulates worsening conditions
-- ✅ CSV input/output for all data
-- ✅ Complete complexity analysis with proofs
-- ✅ Real-world relevance discussion
+- Array-based Max Heap with zero-based indexing
+- `insert()` — O(log n) bubble-up
+- `extractMax()` — O(log n) remove root + heapify
+- `increasePriority()` — O(log n) update + bubble-up
+- `isEmpty()` — O(1)
+- `maxHeapify()` — O(log n) down-heap traversal
+- `buildMaxHeap()` — O(n) Floyd's Algorithm
+- 1,000+ synthetic patient dataset
+- 24-hour ER simulation with random arrivals
+- Peak-hour arrival modelling (8am–8pm higher rate)
+- Random priority escalation — simulates worsening conditions
+- CSV input/output for all data
+- Complete complexity analysis with proofs
+- Real-world relevance discussion
 
 ---
 
