@@ -5,17 +5,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * EMERGENCY ROOM TRIAGE SYSTEM
- * Heap-Based Priority Queue Implementation
- * Course: Design and Analysis of Algorithms
- * 
- * All algorithms implemented manually
- * Array-based max heap with zero-based indexing
- * Parent(i) = floor((i-1)/2)
- * 
- * CSV Format: Preferred input/output format
- */
+
 public class EmergencyRoomTriage {
     
     private static final int MAX = 2000;
